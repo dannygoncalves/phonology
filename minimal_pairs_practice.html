@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Phonology - Repetition 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Nova+Round|Ubuntu|Lobster|Inconsolata|Oxygen|Montserrat|Vollkorn|Linden+Hill' rel='stylesheet' type='text/css'>
+	
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script> 
+    $(function(){
+		$("#navigation").load("navigation.html"); 
+		$("#footer-container").load("footer.html"); 
+    });
+    </script>
+  </head>
+
+  <body>
+	<!-- Header -->
+	<div class="container">
+		<div id="header">
+			<img src="img/header.jpg" class="img-responsive" >
+		</div>
+	</div>
+	<!-- Header ends here -->
+	
+	<!-- Navbar begins here -->
+    <div class="container" id="navigation"></div> <!-- /container -->
+
+	<div class="container">
+		<ol class="breadcrumb">
+		   <li><a href="lets_study.html"><i class="fa fa-chevron-right"></i> Let's study</a></li>
+			<li><a href="repetition.html"><i class="fa fa-chevron-right"></i> Repetition</a></li>
+			<li class="active"><a href="repetition1.html"><i class="fa fa-chevron-right"></i> Repetition 1</a></li>
+		</ol>
+	
+      <div class="row row-offcanvas row-offcanvas-right">
+
+		<div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+           <a href="repetition.html" class="list-group-item active">Repetition</a>
+           <a href="sounds_patterns.html" class="list-group-item">Sounds and patterns</a>
+           <a href="analysis.html" class="list-group-item">Analysis</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+	  
+	  
+       <div class="col-xs-12 col-sm-9">
+  
+          <div class="jumbotron">
+			  <h1>Minimal pairs</h1>
+			  <p class="text-justify">Listen to the following sentences and identify which of the two images correspond to the blank space (________) in the sentence.</p>
+		  </div>
+          <div class="row">
+            <div class="col-xs-12 col-lg-12">
+
+				
+				<hr>
+				<!-- FORM -->
+				<div class="table-responsive">
+					<form id="testForm" name="testForm" >
+			
+							<!-- Examples End set to enabled -->
+					 <table class="table table-striped minimal-pairs-table">
+						<thead>
+							<tr>
+								<th width="5%"></th>
+								<th width="30%">Sentences</th>
+								<th width="25%" class="text-center">First image</th>
+								<th width="25%" class="text-center">Second image</th>
+								<th width="10%"></th>
+							</tr>
+						</thead>
+						
+						<tbody>		
+							<!-- OPTION 1 -->
+							<tr>
+								<td>1</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio1').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio1" src="audio/minimal_pairs/im1.mp3"></audio>&nbsp;Give me that ________.</p>
+									<span id="message1"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_1_back.png" class="img-responsive img-selector" id="1_q1">
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_1_bag.png" class="img-responsive img-selector" id="2_q1">
+									<input type="hidden" id="option1" name="option1" value="0">
+								</td>
+								<td id="answer1"></td>
+							</tr>
+							<!-- OPTION 2 -->
+							<tr>
+								<td>2</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio2').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio2" src="audio/minimal_pairs/im2.mp3"></audio>&nbsp;Be careful! Don’t ________ it.</p>
+									<span id="message2"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_2_crease.png" class="img-responsive img-selector" id="1_q2">
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_2_grease.png" class="img-responsive img-selector" id="2_q2">
+									<input type="hidden" id="option2" name="option2" value="0">
+								</td>
+								<td id="answer2"></td>
+							</tr>
+							<!-- OPTION 3 -->
+							<tr>
+								<td>3</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio3').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio3" src="audio/minimal_pairs/im3.mp3"></audio>&nbsp;The ________ are enormous.</p>
+									<span id="message3"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_3_locks.png" class="img-responsive img-selector" id="1_q3">
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_3_logs.png" class="img-responsive img-selector" id="2_q3">
+									<input type="hidden" id="option3" name="option3" value="0">
+								</td>
+								<td id="answer3"></td>
+							</tr>
+							<!-- OPTION 4 -->
+							<tr>
+								<td>4</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio4').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio4" src="audio/minimal_pairs/im4.mp3"></audio>&nbsp;This dish is all ________.</p>
+									<span id="message4"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_4_cold.png" class="img-responsive img-selector" id="1_q4" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_4_gold.png" class="img-responsive img-selector" id="2_q4" >
+									<input type="hidden" id="option4" name="option4" value="0">
+								</td>
+								<td id="answer4"></td>
+							</tr>
+							<!-- OPTION 5 -->
+							<tr>
+								<td>5</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio5').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio5" src="audio/minimal_pairs/im5.mp3"></audio>&nbsp;The ________ was too short.</p>
+									<span id="message5"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_5_wick.png" class="img-responsive img-selector" id="1_q5">
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_5_wig.png" class="img-responsive img-selector" id="2_q5">
+									<input type="hidden" id="option5" name="option5" value="0">
+								</td>
+								<td id="answer5"></td>
+							</tr>
+							<!-- OPTION 6 -->
+							<tr>
+								<td>6</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio6').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio6" src="audio/minimal_pairs/im6.mp3"></audio>&nbsp;His ________ certainly didn’t help.</p>
+									<span id="message6"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_6_anchor.png" class="img-responsive img-selector" id="1_q6" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_6_anger.png" class="img-responsive img-selector" id="2_q6" >
+									<input type="hidden" id="option6" name="option6" value="0">
+								</td>
+								<td id="answer6"></td>
+							</tr>
+							<!-- OPTION 7 -->
+							<tr>
+								<td>7</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio7').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio7" src="audio/minimal_pairs/im7.mp3"></audio>&nbsp;There weren’t any ________.</p>
+									<span id="message7"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_7_snacks.png" class="img-responsive img-selector" id="1_q7" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_7_snags.png" class="img-responsive img-selector" id="2_q7" >
+									<input type="hidden" id="option7" name="option7" value="0">
+								</td>
+								<td id="answer7"></td>
+							</tr>
+							<!-- OPTION 8 -->
+							<tr>
+								<td>8</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio8').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio8" src="audio/minimal_pairs/im8.mp3"></audio>&nbsp;The ________ arrived too late.</p>
+									<span id="message8"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_8_cards.png" class="img-responsive img-selector" id="1_q8" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_8_guards.png" class="img-responsive img-selector" id="2_q8" >
+									<input type="hidden" id="option8" name="option8" value="0">
+								</td>
+								<td id="answer8"></td>
+							</tr>
+							<!-- OPTION 9 -->
+							<tr>
+								<td>9</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio9').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio9" src="audio/minimal_pairs/im9.mp3"></audio>&nbsp;The ________ were blonde.</p>
+									<span id="message9"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_9_curls.png" class="img-responsive img-selector" id="1_q9" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_9_girls.png" class="img-responsive img-selector" id="2_q9" >
+									<input type="hidden" id="option9" name="option9" value="0">
+								</td>
+								<td id="answer9"></td>
+							</tr>
+							<!-- OPTION 10 -->
+							<tr>
+								<td>10</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio10').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio10" src="audio/minimal_pairs/im10.mp3"></audio>&nbsp;The city is full of ________.</p>
+									<span id="message10"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_10_crime.png" class="img-responsive img-selector" id="1_q10" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_10_grime.png" class="img-responsive img-selector" id="2_q10" >
+									<input type="hidden" id="option10" name="option10" value="0">
+								</td>
+								<td id="answer10"></td>
+							</tr>
+							
+							<!-- OPTION 11 -->
+							<tr>
+								<td>11</td>
+								<td>
+									<p><img src="img/play.png" style="cursor:pointer;" onclick="document.getElementById('audio11').play()" title="Play audio" data-toggle="tooltip" >
+									<audio id="audio11" src="audio/minimal_pairs/im11.mp3"></audio>&nbsp;Have you ever seen such a big ________?</p>
+									<span id="message11"></span>
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_11_stack.png" class="img-responsive img-selector" id="1_q11" >
+								</td>
+								<td class="text-center">
+									<img src="img/minimal_pairs/pregunta_11_stag.png" class="img-responsive img-selector" id="2_q11" >
+									<input type="hidden" id="option11" name="option11" value="0">
+								</td>
+								<td id="answer11"></td>
+							</tr>
+							
+						</tbody>
+					  </table>
+					<div class="text-center">
+						<button type="submit" class="btn btn-success">Process</button>
+						<button type="button" id="button-reset-form" class="btn btn-warning">Restart</button>
+					</div>
+					<div class="clearfix"></div>
+					<div id="test-response">
+						
+						
+					</div>
+					</form>
+				</div>
+				
+				
+            </div><!--/.col-xs-6.col-lg-4-->
+          
+           
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        
+      </div><!--/row-->
+
+      <hr>
+
+    </div><!--/.container-->
+
+	<!-- Footer & Sitemap section -->
+	<footer id="footer-container"></footer>
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/main.functions.js"></script>
+	<script src="js/jquery.form.min.js"></script>
+	<script src="js/minimal_pairs_practice.js"></script>
+  </body>
+</html>

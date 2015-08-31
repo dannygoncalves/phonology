@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Phonology - mental linkages</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Nova+Round|Ubuntu|Lobster|Inconsolata|Oxygen|Montserrat|Vollkorn|Linden+Hill' rel='stylesheet' type='text/css'>
+	
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script> 
+    $(function(){
+		$("#navigation").load("navigation.html"); 
+		$("#footer-container").load("footer.html"); 
+    });
+    </script>
+  </head>
+
+  <body>
+	<!-- Header -->
+	<div class="container">
+		<div id="header">
+			<img src="img/header.jpg" class="img-responsive" >
+		</div>
+	</div>
+	<!-- Header ends here -->
+	
+	<!-- Navbar begins here -->
+    <div class="container" id="navigation"></div> <!-- /container -->
+
+	<div class="container">
+		<ol class="breadcrumb">
+		  <li><a href="memorize.html"><i class="fa fa-chevron-right"></i> Memorize</a></li>
+		  <li class="active"><a href="mental_linkages.html"><i class="fa fa-chevron-right"></i> Mental linkages</a></li>
+		</ol>
+	
+      <div class="row row-offcanvas row-offcanvas-right">
+
+		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="mental_linkages.html" class="list-group-item active">Mental linkages</a>
+            <a href="images_sounds.html" class="list-group-item">Images and sounds</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+	  
+	  
+        <div class="col-xs-12 col-sm-9">		
+          <div class="jumbotron">
+            <h1>Mental linkages</h1>
+            <p class="text-justify">In the following activity you will find a set of terms and their definitions. Select the term and move it to the concept that corresponds.</p>
+			<p>If the concept background turns into <font class="text-primary">blue</font>, it means that the term has not been linked to a concept yet.</p>
+			<p>If the concept background turns <font class="text-warning">yellow</font>, it means that the term has been linked to a concept already. If you remove a term from the concept that was linked, it will be considered as an empty option when you select the process button.</p>   
+          </div>  
+
+			
+		 <!-- Términos -->
+			<div class="col-md-6 terms">
+				<h1>Terms</h1>
+				<p><small>(Drag each term to it's corresponding concept on the right)</small></p>
+				<hr>		 
+				  <p id="phoneme" class="bg-primary draggable terms">1. Phonemes</p>
+				  <p id="phonology" class="bg-primary draggable terms">2. Phonology</p>
+				  <p id="syllable" class="bg-primary draggable terms">3. Syllable</p>
+				  <p id="assimilation" class="bg-primary draggable terms">4. Assimilation</p>
+				  <p id="elision" class="bg-primary draggable terms">5. Elision</p>
+				  <p id="coalescence" class="bg-primary draggable terms">6. Coalescence</p>
+				  <p id="minimal_pair" class="bg-primary draggable terms">7. Minimal pair</p>
+				  <p id="minimal_set" class="bg-primary draggable terms">8. Minimal set</p>
+				  <p id="stress" class="bg-primary draggable terms">9. Stress</p>
+				  <p id="intonation" class="bg-primary draggable terms">10. Intonation</p>
+			</div>
+		<!-- Conceptos -->
+			<div class="col-md-6">
+				<h1>Concepts</h1>
+				<p><small>(Drop terms below)</small></p>
+				<hr>
+				
+				<!-- Term -->
+				<div id="assimilation_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">When two phonemes occur in sequence and some aspect of one phoneme is taken or copied by the other.</p>
+				  <input type="hidden" id="assimilation_accept_answer" class="answers" value="">
+				</div>
+				
+				
+		
+				
+				<!-- Term -->
+				<div id="syllable_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">The representation of a level of structure intuitively recognized by speakers of the language.</p>
+				  <input type="hidden" id="syllable_accept_answer" class="answers" value="">
+				</div>
+				
+				
+				
+				<!-- Term -->
+				<div id="stress_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">Involves a rise in air pressure, an increase in the activity of the respiratory muscles forces more air out of the lungs during the articulation of a particular syllable.</p>
+				  <input type="hidden" class="answers" id="stress_accept_answer" value="">
+				</div>
+				
+				<!-- Term -->
+				<div id="phonology_accept" class="col-md-12 bg-info concepts" data-quantity="0" >
+				  <p class="text-justify">The description of the systems and patterns of speech sounds in a language.</p>
+				  <input type="hidden" id="phonology_accept_answer" class="answers" value="">
+				</div>
+				
+				<!-- Term -->
+				<div id="elision_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">The omission of a sound segment which would be present in the deliberate pronunciation of a word in isolation.</p>
+				  <input type="hidden" id="elision_accept_answer" class="answers" value="">
+				</div>
+				
+				<!-- Term -->
+				<div id="phoneme_accept" class="col-md-12 bg-info concepts" data-quantity="0" >
+				  <p class="text-justify">They are unpredictable, their occurrence depends on what the speaker wants to say. They are said to be in parallel distribution because they occur in the same phonetic environment.</p>
+				  <input type="hidden" id="phoneme_accept_answer" class="answers" value="">
+				</div>
+				
+				<!-- Term -->
+				<div id="coalescence_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">When two segments are replaced by a single one which shows features of the two original ones.</p>
+				  <input type="hidden" id="coalescence_accept_answer" class="answers" value="">
+				</div>
+				
+				<!-- Term -->
+				<div id="intonation_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">Refers to the patterns of pitch variation in a sentence.</p>
+				  <input type="hidden" id="intonation_accept_answer" class="answers" value="">
+				</div>
+	
+				<!-- Term -->
+				<div id="minimal_set_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">When a group of words can be differentiated, each one from the others, by changing one phoneme that is always in the same position.</p>
+				  <input type="hidden" id="minimal_set_accept_answer" class="answers" value="">
+				</div>
+				
+				
+				
+				<!-- Term -->
+				<div id="minimal_pair_accept" class="col-md-12 bg-info concepts" data-quantity="0 ">
+				  <p class="text-justify">When two words are identical in form except for a contrast in one phoneme occurring in the same position.</p>
+				  <input type="hidden" id="minimal_pair_accept_answer" class="answers" value="">
+				</div>
+				
+			</div>
+		  
+		  
+			<div class="text-center">
+				<button type="button" class="btn btn-success">Process</button>
+				<button type="button" id="button-reset-form" class="btn btn-warning">Restart</button>
+			</div>
+			<div class="clearfix"></div>
+			<div id="test-response">
+			</div>
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        
+      </div><!--/row-->
+
+      <hr>
+
+    </div><!--/.container-->
+
+	<!-- Footer & Sitemap section -->
+	<footer id="footer-container"></footer>
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/main.functions.js"></script>
+	
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootbox code -->
+    <script src="js/bootbox.min.js"></script>
+	<script src="js/mental_linkages.js"></script>
+  </body>
+</html>
