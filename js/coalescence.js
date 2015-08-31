@@ -1,12 +1,5 @@
 /**** Process the form with jQuery Form Malsup Plugin *****/
 
-$( '#button-reset-form' ).click(function(){
-	$("input[type='radio'][name^='option']").prop('checked', false);
-
-	$('[id^="answer"]').html('');
-	$('#test-response').html('');
-});
-
 
 $('#testForm').ajaxForm(function() {
 	$('html,body').animate({
@@ -20,104 +13,104 @@ $('#testForm').ajaxForm(function() {
 
 function validation(){
 
-	var contador = 10;
+	var contador = 12;
 	var message  = "";
 
 	/*** 0 it's falling and 1 it's rising
 	/** Option 1  => 3 **/
-	if( $('input[name=option1]:checked', '#testForm').val() != 3){
+	if( $('#question1', '#testForm').val() != 3){
 		contador = contador-1;
-	  $('#answer1').html("<i class='fa fa-close' style='color:red;'></i>");
+	  $('#answer1').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer1').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer1').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 2  => 4**/
-	if( $('input[name=option2]:checked', '#testForm').val() == 0){
+	if( $('#question2', '#testForm').val() != 3){
 		contador = contador-1;
-		$('#answer2').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer2').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer2').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer2').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
-	/** Option 3  => 4**/
-	if( $('input[name=option3]:checked', '#testForm').val() == 1){
+	/** Option 3  => 1**/
+	if( $('#question3', '#testForm').val() != 1){
 		contador = contador-1;
-		$('#answer3').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer3').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer3').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer3').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 4  => 3**/
-	if( $('input[name=option4]:checked', '#testForm').val() == 1){
+	if( $('#question4', '#testForm').val() != 3){
 		contador = contador-1;
-		$('#answer4').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer4').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer4').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer4').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
-	/** Option 5  => 1**/
-	if( $('input[name=option5]:checked', '#testForm').val() == 1){
+	/** Option 5  => 4**/
+	if( $('#question5', '#testForm').val() != 4){
 		contador = contador-1;
-		$('#answer5').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer5').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer5').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer5').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 6  => 1**/
-	if( $('input[name=option6]:checked', '#testForm').val() == 0){
+	if( $('#question6', '#testForm').val() != 1){
 		contador = contador-1;
-		$('#answer6').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer6').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer6').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer6').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
-	/** Option 7  => 1**/
-	if( $('input[name=option7]:checked', '#testForm').val() == 1){
+	/** Option 7  => 4**/
+	if( $('#question7', '#testForm').val() != 4){
 		contador = contador-1;
-		$('#answer7').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer7').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer7').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer7').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
-	/** Option 8  => 4**/
-	if( $('input[name=option8]:checked', '#testForm').val() == 1){
+	/** Option 8  => 2**/
+	if( $('#question8', '#testForm').val() != 2){
 		contador = contador-1;
-		$('#answer8').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer8').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer8').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer8').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
-	/** Option 9  => 2**/
-	if( $('input[name=option9]:checked', '#testForm').val() == 1){
+	/** Option 9  => 4**/
+	if( $('#question9', '#testForm').val() != 4){
 		contador = contador-1;
-		$('#answer9').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer9').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer9').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer9').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 10  => 3**/
-	if( $('input[name=option10]:checked', '#testForm').val() == 0){
+	if( $('#question10', '#testForm').val() != 1){
 		contador = contador-1;
-		$('#answer10').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer10').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer10').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer10').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 11  => 2**/
-	if( $('input[name=option11]:checked', '#testForm').val() == 0){
+	if( $('#question11', '#testForm').val() != 2){
 		contador = contador-1;
-		$('#answer11').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer11').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer11').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer11').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/** Option 12  => 2**/
-	if( $('input[name=option12]:checked', '#testForm').val() == 0){
+	if( $('#question12', '#testForm').val() != 2){
 		contador = contador-1;
-		$('#answer12').html("<i class='fa fa-close' style='color:red;'></i>");
+		$('#answer12').html("<br><i class='fa fa-close' style='color:red;'></i>");
 	}else{
-		$('#answer12').html("<i class='fa fa-check' style='color:green;'></i>");
+		$('#answer12').html("<br><i class='fa fa-check' style='color:green;'></i>");
 	}
 
 	/*** Switch for responses ***/
@@ -133,7 +126,7 @@ function validation(){
 
 	/*** Print response on well ***/
 	setTimeout(function(){
-		$('#test-response').html('<div class="alert alert-success" role="alert"><p>You have answered correctly '+contador+' out of 10 questions<br>'+message+'</div>');
+		$('#test-response').html('<div class="alert alert-success" role="alert"><p>You have answered correctly '+contador+' out of 12 questions<br>'+message+'</div>');
 	}, 4000);
 
 
